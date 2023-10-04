@@ -34,6 +34,7 @@ body {
     border-radius: 10px;
     box-shadow: 1px 1px 5px 1px #1b37b4;
     text-align: center;
+    margin-left: -10px;
   }
   
   .url-shortener:hover {
@@ -41,7 +42,7 @@ body {
   }
   
   .container {
-    width: 400px;
+    width: 100%;
     margin: auto;
     text-align: center;
   }
@@ -135,6 +136,7 @@ body {
     padding: 10px;
     text-align: left;
     line-height: 30px;
+    padding: 50px;
   }
   
   #recent-url-content h3 {
@@ -168,6 +170,7 @@ body {
         width: 50%;
         max-height: 450px;
         height: 450px;
+        margin-left: auto;
     }
 
     #recent-url-content {
@@ -175,6 +178,5 @@ body {
         margin-bottom: 100px;
         width: 30%;
         height: 400px;
-        padding: 50px;
     }
   }
