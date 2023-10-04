@@ -1,4 +1,4 @@
-const apiKey = "efba76953df04c8f9959d24c3236faa3"; // "dbbb163bd17a4accb5b0dc63b6ebdd17";
+const apiKey = ''; //Create an API key on rebrandly.com
 const url = "https://api.rebrandly.com/v1/links";
 
 const inputField = document.getElementById("input");
@@ -89,6 +89,7 @@ const renderResponse = (result) => {
     recentUrls.push(result.shortUrl);
     localStorage.setItem("recent", JSON.stringify(recentUrls));
     inputField.value = "";
+    document.getElementById("result").style.visibility = "visible";
     copy.addEventListener("click", () => {
       copyToClipboard(result.shortUrl);
     });
