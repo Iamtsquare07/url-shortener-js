@@ -103,6 +103,7 @@ body {
     text-align: center;
     color: #ffffff;
     overflow: auto;
+    visibility: hidden;
   }
 
   #result:hover {
