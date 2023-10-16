@@ -1,182 +1,190 @@
 @import url('https://fonts.googleapis.com/css2?family=Croissant+One&display=swap');
 
 body {
-    padding: 10px;
-    background-color: #000014;
-    width: 100%;
-    height: 100vh;
-    margin: 0;
-    overflow: hidden;
-    color: #c2c5ff;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-  
-  h1,
-  h2,
-  h3,
-  h4 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: rgba(255, 217, 0, 0.61);
-    font-family: 'Croissant One', cursive;
-  }
-  
+  padding: 10px;
+  background-color: #000014;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  color: #c2c5ff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgba(255, 217, 0, 0.61);
+  font-family: 'Croissant One', cursive;
+}
+
+h1 {
+  font-size: 5vw;
+}
+
+.url-shortener {
+  font-family: Arial, sans-serif;
+  color: #bfd0ff;
+  margin: auto;
+  width: 90%;
+  height: auto;
+  margin-top: 10px;
+  background-color: #00006e;
+  padding: 50px 20px 50px 20px;
+  padding-top: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px 1px #1b37b4;
+  text-align: center;
+  margin-left: -10px;
+}
+
+.url-shortener:hover {
+  box-shadow: 1px 1px 15px 2px #1b37b4;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+#input {
+  width: 80%;
+  padding: 10px;
+  border-radius: 3.2px;
+  border: solid 1px #0118ad;
+  background-color: #8a8aff;
+  display: block;
+  margin: auto;
+  font-family: Source Sans Pro;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  text-align: center;
+  color: #ffffff;
+}
+
+button {
+  width: 91px;
+  height: 37px;
+  border-radius: 25px;
+  border: solid 0.8px #01169c;
+  background-color: inherit;
+  margin-top: 48px;
+  font-family: Source Sans Pro;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  text-align: center;
+  color: #ffffff;
+  margin-right: -3px;
+}
+
+button:hover {
+  background-color: #1f233e;
+  border: solid 0.8px #4a4a4a;
+  color: #0087de;
+  cursor: pointer;
+}
+
+#shorten:active {
+  background-color: #ffffff;
+  border: solid 0.8px #4a4a4a;
+  color: #1f233e;
+  cursor: pointer;
+}
+
+#result {
+  min-width: 190px;
+  min-height: 150px;
+  border-radius: 5px;
+  border: solid 2px #0222ad;
+  margin: auto;
+  margin-top: 30px;
+  font-family: Source Sans Pro;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  text-align: center;
+  color: #ffffff;
+  overflow: auto;
+  visibility: hidden;
+}
+
+#result:hover {
+  background-color: #02008f;
+}
+
+#copy {
+  display: none;
+  margin: auto;
+}
+
+#recent-url-modal {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000014c5;
+  padding: 10px;
+}
+
+#recent-url-content {
+  width: 80%;
+  background-color: #001286;
+  height: 100vh;
+  margin: auto;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: left;
+  line-height: 30px;
+  padding: 50px;
+}
+
+#recent-url-content h3 {
+  text-align: left;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  font-size: 17px;
+  font-weight: 600;
+  margin-left: -50px;
+}
+
+li a {
+  color: white;
+  text-decoration: none;
+}
+
+#close-recent {
+  font-size: 18px;
+  font-weight: 700;
+  float: right;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1024px) {
   .url-shortener {
-    font-family: Arial, sans-serif;
-    color: #bfd0ff;
-    margin: auto;
-    width: 90%;
-    height: auto;
-    margin-top: 10px;
-    background-color: #00006e;
-    padding: 50px 20px 50px 20px;
-    padding-top: 10px;
-    border-radius: 10px;
-    box-shadow: 1px 1px 5px 1px #1b37b4;
-    text-align: center;
-    margin-left: -10px;
-  }
-  
-  .url-shortener:hover {
-    box-shadow: 1px 1px 15px 2px #1b37b4;
-  }
-  
-  .container {
-    width: 100%;
-    margin: auto;
-    text-align: center;
-  }
-  
-  #input {
-    width: 80%;
-    padding: 10px;
-    border-radius: 3.2px;
-    border: solid 1px #0118ad;
-    background-color: #8a8aff;
-    display: block;
-    margin: auto;
-    font-family: Source Sans Pro;
-    font-size: 14px;
-    letter-spacing: 0.2px;
-    text-align: center;
-    color: #ffffff;
-  }
-  
-  button {
-    width: 91px;
-    height: 37px;
-    border-radius: 25px;
-    border: solid 0.8px #01169c;
-    background-color: inherit;
-    margin-top: 48px;
-    font-family: Source Sans Pro;
-    font-size: 14px;
-    letter-spacing: 0.2px;
-    text-align: center;
-    color: #ffffff;
-    margin-right: -3px;
-  }
-  
-  button:hover {
-    background-color: #1f233e;
-    border: solid 0.8px #4a4a4a;
-    color: #0087de;
-    cursor: pointer;
-  }
-  
-  #shorten:active {
-    background-color: #ffffff;
-    border: solid 0.8px #4a4a4a;
-    color: #1f233e;
-    cursor: pointer;
-  }
-  
-  #result {
-    min-width: 190px;
-    min-height: 150px;
-    border-radius:5px;
-    border: solid 2px #0222ad;
-    margin: auto;
-    margin-top: 30px;
-    font-family: Source Sans Pro;
-    font-size: 16px;
-    letter-spacing: 0.2px;
-    text-align: center;
-    color: #ffffff;
-    overflow: auto;
-    visibility: hidden;
+    width: 50%;
+    max-height: 450px;
+    height: 450px;
+    margin-left: auto;
   }
 
-  #result:hover {
-    background-color:#02008f;
-  }
-
-  #copy {
-    display: none;
-    margin: auto;
-  }
-
-  #recent-url-modal {
-    display: none;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color:#000014c5;
-    padding: 10px;
+  h1 {
+    font-size: 30px;
   }
 
   #recent-url-content {
-    width: 80%;
-    background-color:#001286;
-    height: 100vh;
-    margin: auto;
-    border-radius:10px;
-    padding: 10px;
-    text-align: left;
-    line-height: 30px;
-    padding: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 30%;
+    height: 400px;
   }
-  
-  #recent-url-content h3 {
-    text-align: left;
-  }
-
-  ul {
-    list-style: none;
-  }
-
-  li {
-    font-size: 17px;
-    font-weight: 600;
-    margin-left: -50px;
-  }
-
-  li a {
-    color:white;
-    text-decoration: none;
-  }
-
-  #close-recent {
-    font-size: 18px;
-    font-weight: 700;
-    float: right;
-    cursor: pointer;
-  }
-
-  @media only screen and (min-width: 1024px) {
-    .url-shortener {
-        width: 50%;
-        max-height: 450px;
-        height: 450px;
-        margin-left: auto;
-    }
-
-    #recent-url-content {
-        margin-top: 100px;
-        margin-bottom: 100px;
-        width: 30%;
-        height: 400px;
-    }
-  }
+}
